@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FrontPage></FrontPage>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FrontPage from './pages/FrontPage'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FrontPage
   }
 }
 </script>
@@ -23,6 +22,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+html, body {
+  background: #533D4A;
+  margin: 0;
+  font-family:'ArialNarrow', sans-serif;
+  src: url('assets/fonts/ArialNarrow.ttf');
+  font-style: normal;
+  font-weight:400;
+  font-size: 2rem;
+  font-stretch: 1% 500%; /* Required by Chrome */
+  overflow: hidden;
 }
 </style>
