@@ -24,27 +24,12 @@ html,body {
   width: 100vw;
   padding: 0;
 }
-/*
-OpenCall {
-  position: relative;
-  float: left;
-  width: 35vw;
-  height: 35vw;
-  padding-top: 11vh;
-  padding-left: 2vw;
 
-}
+
 
 @media all and (max-width: 1000px) {
-  OpenCall {
-    position: relative;
-    width: 100vw;
-    height: 50vw;
-    margin-top: 30vh;
-    padding-left: 22vw;
-  }
+
 }
 
- */
 
 </style>
