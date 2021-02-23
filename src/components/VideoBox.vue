@@ -1,23 +1,24 @@
 <template>
-    <draggable-link
-        class="videoBox"
-        height="80"
-        width="80"
-    >
+  <draggable-link
+      class="videoBox"
+      height="80"
+      width="80"
+  >
 
-      <div class="switchingContent">
-        agha gjsd 9dja lklaö agajlk gjkdfgjk a
-      </div>
+    <div class="switchingContent">
+      Hallo Test Text
+    </div>
 
-    </draggable-link>
-  </template>
+  </draggable-link>
+</template>
 
 <script>
 import DraggableLink from "@/shared/DraggableLink";
+
 export default {
-name: "VideoBox",
+  name: "VideoBox",
   components: {
-  DraggableLink
+    DraggableLink
   }
 }
 </script>
@@ -27,19 +28,20 @@ name: "VideoBox",
   background: #2c3e50;
   position: absolute;
 
-  word-wrap: break-word;      /* IE 5.5-7 */
+  word-wrap: break-word; /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
 
-  font-size-adjust: 0.12;
+  font-size: 16px;
   box-shadow: 0px 0px 15px 0px white;
 }
 
 .switchingContent {
-box-sizing: border-box;
+  height: 100%;
 
-  background-size: contain; background-position: center;
+  background-size: contain;
+  background-position: center;
 
-animation-name: switch;
+  animation-name: switch;
   animation-iteration-count: infinite;
   animation-duration: 4s;
   animation-direction: alternate;
@@ -51,16 +53,48 @@ animation-name: switch;
   animation-duration: 2s;
   animation-direction: alternate;
 }
+
 @keyframes glow {
-  0% {box-shadow: 0px 0px 15px 0px white;}
-  100% {box-shadow: 0px 0px 10px 0px royalblue;}
+  0% {
+    box-shadow: 0px 0px 15px 0px white;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px royalblue;
+  }
 }
+
 @keyframes switch {
-  0% {color: black;  opacity: 100%; background: rgba(0,0,0,0)}
-  33% {color: black; opacity: 100%; background: rgba(0,0,0,0)}
-  50% {opacity: 0%; color: rgba(0,0,0,0); background: rgba(0,0,0,0); background-size: contain; background-position: center }
-  66% {opacity: 100%;color: rgba(0,0,0,0); background: url("../assets/mj.jpg") no-repeat; background-size: contain; background-position: center}
-  100% {opacity: 100%;color: rgba(0,0,0,0); background: url("../assets/mj.jpg") no-repeat; background-size: contain; background-position: center}
+  0% {
+    color: black;
+    opacity: 100%;
+    background: rgba(0, 0, 0, 0)
+  }
+  33% {
+    color: black;
+    opacity: 100%;
+    background: rgba(0, 0, 0, 0)
+  }
+  50% {
+    opacity: 0%;
+    color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    background-size: contain;
+    background-position: center
+  }
+  66% {
+    opacity: 100%;
+    color: rgba(0, 0, 0, 0);
+    background: url("../assets/mj.jpg") no-repeat;
+    background-size: contain;
+    background-position: center
+  }
+  100% {
+    opacity: 100%;
+    color: rgba(0, 0, 0, 0);
+    background: url("../assets/mj.jpg") no-repeat;
+    background-size: contain;
+    background-position: center
+  }
 
 }
 

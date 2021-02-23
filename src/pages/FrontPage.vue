@@ -1,17 +1,18 @@
 <template>
-<body>
-<div class="opencallPosition">
-  <OpenCall ></OpenCall>
-</div>
-<div class="video1Position">
-<VideoBox></VideoBox>
-</div>
-</body>
+  <body>
+  <div class="opencallPosition">
+    <OpenCall></OpenCall>
+  </div>
+  <div class="video1Position">
+    <VideoBox></VideoBox>
+  </div>
+  </body>
 </template>
 
 <script>
 import OpenCall from "@/components/OpenCall";
 import VideoBox from "@/components/VideoBox";
+
 export default {
   name: "FrontPage",
   components: {
@@ -22,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-html,body {
+html, body {
   background: #603f3f;
   background: url("../assets/background.jpg") no-repeat;
   background-size: cover;
@@ -30,6 +31,7 @@ html,body {
   width: 100vw;
   padding: 0;
 }
+
 .opencallPosition {
   float: left;
   padding-top: 31vh;

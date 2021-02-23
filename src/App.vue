@@ -23,13 +23,14 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
 html, body {
   background: #533D4A;
   margin: 0;
-  font-family:'ArialNarrow', sans-serif;
+  font-family: 'ArialNarrow', sans-serif;
   src: url('assets/fonts/ArialNarrow.ttf');
   font-style: normal;
-  font-weight:400;
+  font-weight: 400;
   font-size: 2rem;
   font-stretch: 1% 500%; /* Required by Chrome */
   overflow: hidden;

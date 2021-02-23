@@ -1,9 +1,9 @@
 <template>
- <draggable-link
-     link="../assets/opencall-holdhands-de.pdf"
-     target="_blank"
- >
-      <img id="pdf-thumb" src="../assets/opencall-pdf-icon.png">
+  <draggable-link
+      link="../assets/opencall-holdhands-de.pdf"
+      target="_blank"
+  >
+    <img id="pdf-thumb" src="../assets/opencall-pdf-icon.png">
 
   </draggable-link>
 
@@ -13,8 +13,9 @@
 
 
 import DraggableLink from "@/shared/DraggableLink";
+
 export default {
-name: "OpenCall",
+  name: "OpenCall",
   components: {DraggableLink},
 }
 
@@ -27,8 +28,7 @@ a {
 }
 
 
-
-#pdf-thumb{
+#pdf-thumb {
   height: 100px;
 }
 
@@ -38,7 +38,8 @@ a {
     width: 100vw;
     height: 50vw;
   }
-  #pdf-thumb{
+
+  #pdf-thumb {
     height: 300px;
   }
 }
