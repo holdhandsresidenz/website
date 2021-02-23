@@ -1,16 +1,22 @@
 <template>
 <body>
-<OpenCall></OpenCall>
+<div class="opencallPosition">
+  <OpenCall ></OpenCall>
+</div>
+<div class="video1Position">
+<VideoBox></VideoBox>
+</div>
 </body>
 </template>
 
 <script>
 import OpenCall from "@/components/OpenCall";
-
+import VideoBox from "@/components/VideoBox";
 export default {
   name: "FrontPage",
   components: {
-    OpenCall
+    OpenCall,
+    VideoBox
   }
 }
 </script>
@@ -24,7 +30,17 @@ html,body {
   width: 100vw;
   padding: 0;
 }
+.opencallPosition {
+  float: left;
+  padding-top: 31vh;
+  padding-left: 15vw;
+}
 
+.video1Position {
+  float: right;
+  padding-right: 22vw;
+  padding-top: 20vh;
+}
 
 
 @media all and (max-width: 1000px) {
