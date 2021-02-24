@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import FrontPage from './pages/FrontPage'
+import FrontPage from './pages/front-page/FrontPage'
 
 export default {
   name: 'App',

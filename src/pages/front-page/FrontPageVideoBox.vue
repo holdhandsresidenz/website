@@ -3,19 +3,8 @@
       height="80"
       width="90"
   >
-    <button
-        type="button"
-        class="btn"
-        @click="showModal"
-    >
-      Open Modal!
-    </button>
 
-    <VideoBoxModal
-        v-show="isModalVisible"
-        @close="closeModal"
-    />
-<div class="box">
+<div class="box" v-on:click="$emit('clicked', ['video1'])">
   <div v-bind:class="boxContent" >
     Hallo Test Text Video Beschreibung Halloo
   </div>
@@ -25,28 +14,20 @@
 </template>
 
 <script>
-import DraggableLink from "@/shared/DraggableLink";
-import VideoBoxModal from "@/shared/VideoBoxModal";
+import DraggableLink from "@/components/DraggableLink";
+
 
 export default {
   name: "VideoBox",
   components: {
     DraggableLink,
-    VideoBoxModal
   },
   data: function () {
     return {
-     boxContent: "textBox",
-      isModalVisible: false,
+     boxContent: "textBox"
     }
   },
   methods: {
-    showModal() {
-      this.isModalVisible = true;
-    },
-    closeModal() {
-      this.isModalVisible = false;
-    },
     switchContent: function () {
       setInterval(()=>
               this.boxContent = ((this.boxContent==="textBox") ? "pictureBox" : "textBox")
@@ -60,40 +41,14 @@ export default {
 </script>
 
 <style scoped>
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: table;
-  transition: opacity 0.3s ease;
-}
 
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.modal-container {
-  width: 300px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
-}
 
 
 
 .box {
   height: 100%;
   width: 100%;
-
+  cursor: pointer;
 border-radius: 0.1em;
   transition-duration: 0.2s;
 }
@@ -114,7 +69,7 @@ width: 100%;
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background-image: url("../assets/mj.jpg");
+  background-image: url("../../assets/mj.jpg");
   background-size: contain;
   box-shadow: 0 0 14px 0 #010DFF;
   word-wrap: break-word; /* IE 5.5-7 */
@@ -123,10 +78,6 @@ width: 100%;
   color: rgba(0,0,0,0);
   transition-duration: 0.2s;
 }
-
-
-
-
 
 
 </style>

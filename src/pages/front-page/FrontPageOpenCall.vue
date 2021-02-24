@@ -15,7 +15,7 @@
 <script>
 
 
-import DraggableLink from "@/shared/DraggableLink";
+import DraggableLink from "@/components/DraggableLink";
 
 export default {
   name: "OpenCall",
