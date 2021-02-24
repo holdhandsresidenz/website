@@ -1,7 +1,7 @@
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
-      <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+      <div class="modal-container" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
 
         <div class="modal-sub-container">
 
@@ -23,7 +23,7 @@
           <section class="modal-text">
             <slot name="text">
               <div class="text">
-                Text
+                Zur Einleitung unseres Projektes möchten wir drei Positionen vorstellen, die innerhalb des künstlerischen Feldes arbeiten, das uns interessiert. In Form von Video-Interviews, die die Künstler:innen inhaltlich selbst gestalten durften, geben sie uns einen Einblick in ihre künstlerische Praxis und Gedanken, die sie in Hinblick auf das digitale Ausstellen oder die Begehung virtueller Räume haben. Ihre Herangehensweisen und Erfahrungen in diesem Bereich fallen ganz unterschiedlich aus. Im Gespräch war Hold Hands mit den Künstler:innen Paula Abalos, Lara Dâmaso und Mickey Yang. Jede Woche werden wir auf unserer Website ein neues Interview veröffentlichen, um uns den Fragen der Residenz—zeitlich sowie inhaltlich—immer mehr zu nähern.
               </div>
             </slot>
           </section>
@@ -33,7 +33,7 @@
         <section class="modal-bio">
           <slot name="bio">
             <div class="bio">
-              Bio
+              Lara Dâmaso (geb. 1996) arbeitet und lebt in Zürich. Nach einer mehrjährigen intensiven Ausbildung in Ballett und zeitgenössischem Tanz, studierte sie an der Hochschule für Grafik und Buchkunst in Leipzig im Fachbereich Medienkunst und an der Zürcher Hochschule der Künste, ZHDK, wo sie ihren Bachelor of Fine Arts erwarb. Ihre künstlerische Praxis variiert zwischen Performances, Videos, Auftritten als Performerin für verschiedene Künstler:innen und DJ-Sets. Lara's Arbeit balanciert zwischen fokussierter Kontrolle und sinnlichem Chaos. Sie strukturiert, um zu destrukturieren und eröffnet so intime Räume, in denen ein Dialog stattfinden kann. Ihre Arbeiten wurden in verschiedenen Institutionen und Off-Spaces gezeigt, wie dem Istituto Svizzero, Centre d'Art Contemporain Genève, Kunsthalle Zürich, Cabaret Voltaire, Plymouth Rock, Kunsthalle Bern, Centre Pasqu'Art. Sie wurde für den Kiefer-Hablitzel Göhner Kunstpreis 2020 nominiert und ist nominiert für die Plattform21. Als Performerin arbeitete sie mit und für Isabel Lewis, Nile Koetting, Nikima Jagudajev, Dora Garcia, Cally Spooner/Offshore, Debora Delmar corp. und Alicia Frankovich.
             </div>
           </slot>
         </section>
@@ -64,18 +64,62 @@ export default {
 </script>
 
 <style scoped>
-*{
-  margin: 0;
-  padding: 0;
-}
+
 .bio, .text {
-  font-size: 16pt;
+
+  padding: 20px;
+  font-size: 12pt;
   color: white;
+flex: 1;
+overflow: auto;
+  /* for Firefox */
+  min-height: 0;
+}
+
+.bio {
+  padding-top: 17%;
+}
+
+
+
+.modal-container {
+  position: absolute;
+  width: 89vw;
+  height: 89vh;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 20px 1px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-sub-container {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+}
+
+.modal-text {
+  flex: 1;
+  display: flex;
+  background: blue;
+  overflow: auto;
+}
+
+.modal-video {
+
+  background: gray;
+}
+
+.modal-bio {
+  flex: 1;
+  display: flex;
+  background: midnightblue;
+
 }
 
 .modal-backdrop {
   position: fixed;
-
   top: 0;
   bottom: 0;
   left: 0;
@@ -84,42 +128,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.modal {
-  position: absolute;
-  width: 89vw;
-  height: 89vh;
-  background: #FFFFFF;
-  box-shadow: 2px 2px 20px 1px;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.modal-sub-container {
-  display: flex;
-  flex: 3;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: stretch;
-}
-
-.modal-text {
-  top: 0;
-  height: 100%;
-  background: blue;
-}
-
-.modal-video {
-  top: 0;
-  background: gray;
-}
-
-.modal-bio {
-  flex: 1;
-  background: midnightblue;
 }
 
 .btn-close {

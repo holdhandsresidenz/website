@@ -25,9 +25,12 @@ export default {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
+  text-align: justify;
   color: #2c3e50;
+
 }
+
 
 html, body {
   margin: 0;
