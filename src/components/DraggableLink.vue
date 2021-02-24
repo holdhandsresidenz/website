@@ -61,7 +61,13 @@ name: "DraggableLink",
 }
 
 @media all and (max-width: 1000px) {
-
+  * {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
   .linkEnabled {
     pointer-events: all;
   }

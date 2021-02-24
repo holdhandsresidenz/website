@@ -6,7 +6,7 @@
 
 <div class="box" v-on:click="$emit('clicked', ['video1'])">
   <div v-bind:class="boxContent" >
-    Hallo Test Text Video Beschreibung Halloo
+    Interview <br/> Lara Dâmaso
   </div>
 
 </div>
@@ -15,8 +15,6 @@
 
 <script>
 import DraggableLink from "@/components/DraggableLink";
-
-
 export default {
   name: "VideoBox",
   components: {
@@ -42,39 +40,43 @@ export default {
 
 <style scoped>
 
-
-
-
 .box {
   height: 100%;
   width: 100%;
   cursor: pointer;
-border-radius: 0.1em;
+  border-radius: 0.3em;
   transition-duration: 0.2s;
-}
-.textBox {
-width: 100%;
-  height: 100%;
-  border-radius: inherit;
+  user-select: none;
+
   word-wrap: break-word; /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  font-size: 11pt;
-  color: white;
-  background: rgba(0,0,0,0);
-  transition-duration: 0s;
-  text-shadow: 0 0 12px blue;
+  font-size: 12pt;
+  color: #B9BABB;
 
 }
+
+.textBox {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transform: skewY(12deg) rotate(-12deg);
+
+
+
+  background: rgba(0,0,0,0);
+  transition-duration: 0s;
+  text-shadow: 0 0 3px gray;
+}
+
 .pictureBox {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background-image: url("../../assets/mj.jpg");
+
+  background: url("../../../assets/blob.svg") no-repeat;
   background-size: contain;
-  box-shadow: 0 0 14px 0 #010DFF;
-  word-wrap: break-word; /* IE 5.5-7 */
-  white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  font-size: 16px;
+
+
   color: rgba(0,0,0,0);
   transition-duration: 0.2s;
 }

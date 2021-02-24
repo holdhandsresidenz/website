@@ -18,6 +18,11 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -25,14 +30,6 @@ export default {
 }
 
 html, body {
-  background: #533D4A;
   margin: 0;
-  font-family: 'ArialNarrow', sans-serif;
-  src: url('assets/fonts/ArialNarrow.ttf');
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2rem;
-  font-stretch: 1% 500%; /* Required by Chrome */
-  overflow: hidden;
 }
 </style>

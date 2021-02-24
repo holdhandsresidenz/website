@@ -1,24 +1,28 @@
 <template>
   <body>
+
   <div class="opencallPosition">
     <OpenCall></OpenCall>
   </div>
-  <div class="video1Position" >
+
+  <div class="video1Position">
     <VideoBox @clicked="this.openModal"></VideoBox>
   </div>
+
   <div>
     <VideoBoxModal
         v-show="isModalVisible"
         @close="closeModal"
-    >dsfg</VideoBoxModal>
+    ></VideoBoxModal>
   </div>
+
   </body>
 </template>
 
 <script>
-import OpenCall from "@/pages/front-page/FrontPageOpenCall";
-import VideoBox from "@/pages/front-page/FrontPageVideoBox";
-import VideoBoxModal from "@/pages/front-page/FrontPageVideoBoxModal";
+import OpenCall from "@/pages/front-page/elements/OpenCall";
+import VideoBox from "@/pages/front-page/elements/VideoLara";
+import VideoBoxModal from "@/pages/front-page/elements/VideoLaraModal";
 
 export default {
   name: "FrontPage",
@@ -33,7 +37,7 @@ export default {
     }
   },
   methods: {
-    openModal(  ) {
+    openModal() {
       this.isModalVisible = true;
     },
     closeModal() {
@@ -51,6 +55,7 @@ html, body {
   height: 100vh;
   width: 100vw;
   padding: 0;
+  overflow: hidden;
 }
 
 .opencallPosition {
