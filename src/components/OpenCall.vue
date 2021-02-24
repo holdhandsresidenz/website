@@ -1,9 +1,12 @@
 <template>
   <draggable-link
-      link="../assets/opencall-holdhands-de.pdf"
+      link='../assets/opencall-holdhands-de.pdf'
       target="_blank"
+      download="opencall-holdhands-de.pdf"
+      width="100"
+      height="100"
   >
-    <img id="pdf-thumb" src="../assets/opencall-pdf-icon.png">
+    <img id="pdf-thumb" src="@/assets/opencall-pdf-icon.png">
 
   </draggable-link>
 
@@ -40,7 +43,7 @@ a {
   }
 
   #pdf-thumb {
-    height: 300px;
+    height: 150px;
   }
 }
 </style>
