@@ -3,7 +3,7 @@
     <div class="modal-backdrop">
       <div class="modal-container" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
 
-        <div class="modal-sub-container">
+        <div class="modal-sub-container" v-bind:style="{ overflow: this.overflow}">
 
           <section class="modal-video">
             <slot name="video">
@@ -70,6 +70,11 @@ export default {
       smallScreen: false
     }
 },
+  computed: {
+    overflow: function () {
+      return this.smallScreen ? "auto" : "null"
+    }
+  },
   methods: {
     close() {
       this.$emit('close');
@@ -123,6 +128,7 @@ overflow: auto;
   display: flex;
   flex: 3;
   flex-direction: column;
+
 }
 
 .modal-text {
@@ -158,8 +164,8 @@ overflow: auto;
 
 .btn-close {
   cursor: pointer;
-  height: 6%;
-  width: 6%;
+  height: 40px;
+  width: 80px;
   position: absolute;
   right: 0px;
   color: white;
