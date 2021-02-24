@@ -33,7 +33,7 @@ export default {
   },
   data: function () {
     return {
-      isModalVisible: false
+      isModalVisible: false,
     }
   },
   methods: {
@@ -42,6 +42,7 @@ export default {
     },
     closeModal() {
       this.isModalVisible = false;
+
     }
   }
 }

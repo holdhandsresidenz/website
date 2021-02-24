@@ -11,7 +11,8 @@
                   style="padding:56.25% 0 0 0;
                   position:relative;">
                 <iframe
-                    src="https://player.vimeo.com/video/510192281?title=0&byline=0&portrait=0"
+                    id="iframe-video"
+                    v-bind:src="videoLink"
                     style="position:absolute;top:0;left:0;width:100%;height:100%;"
                     frameborder="0"
                     allow="autoplay; fullscreen;"
@@ -28,9 +29,17 @@
             </slot>
           </section>
 
+          <section class="modal-bio" v-if="smallScreen">
+            <slot name="bio">
+              <div class="bio">
+                Lara Dâmaso (geb. 1996) arbeitet und lebt in Zürich. Nach einer mehrjährigen intensiven Ausbildung in Ballett und zeitgenössischem Tanz, studierte sie an der Hochschule für Grafik und Buchkunst in Leipzig im Fachbereich Medienkunst und an der Zürcher Hochschule der Künste, ZHDK, wo sie ihren Bachelor of Fine Arts erwarb. Ihre künstlerische Praxis variiert zwischen Performances, Videos, Auftritten als Performerin für verschiedene Künstler:innen und DJ-Sets. Lara's Arbeit balanciert zwischen fokussierter Kontrolle und sinnlichem Chaos. Sie strukturiert, um zu destrukturieren und eröffnet so intime Räume, in denen ein Dialog stattfinden kann. Ihre Arbeiten wurden in verschiedenen Institutionen und Off-Spaces gezeigt, wie dem Istituto Svizzero, Centre d'Art Contemporain Genève, Kunsthalle Zürich, Cabaret Voltaire, Plymouth Rock, Kunsthalle Bern, Centre Pasqu'Art. Sie wurde für den Kiefer-Hablitzel Göhner Kunstpreis 2020 nominiert und ist nominiert für die Plattform21. Als Performerin arbeitete sie mit und für Isabel Lewis, Nile Koetting, Nikima Jagudajev, Dora Garcia, Cally Spooner/Offshore, Debora Delmar corp. und Alicia Frankovich.
+              </div>
+            </slot>
+          </section>
+
         </div>
 
-        <section class="modal-bio">
+        <section class="modal-bio" v-if="!smallScreen">
           <slot name="bio">
             <div class="bio">
               Lara Dâmaso (geb. 1996) arbeitet und lebt in Zürich. Nach einer mehrjährigen intensiven Ausbildung in Ballett und zeitgenössischem Tanz, studierte sie an der Hochschule für Grafik und Buchkunst in Leipzig im Fachbereich Medienkunst und an der Zürcher Hochschule der Künste, ZHDK, wo sie ihren Bachelor of Fine Arts erwarb. Ihre künstlerische Praxis variiert zwischen Performances, Videos, Auftritten als Performerin für verschiedene Künstler:innen und DJ-Sets. Lara's Arbeit balanciert zwischen fokussierter Kontrolle und sinnlichem Chaos. Sie strukturiert, um zu destrukturieren und eröffnet so intime Räume, in denen ein Dialog stattfinden kann. Ihre Arbeiten wurden in verschiedenen Institutionen und Off-Spaces gezeigt, wie dem Istituto Svizzero, Centre d'Art Contemporain Genève, Kunsthalle Zürich, Cabaret Voltaire, Plymouth Rock, Kunsthalle Bern, Centre Pasqu'Art. Sie wurde für den Kiefer-Hablitzel Göhner Kunstpreis 2020 nominiert und ist nominiert für die Plattform21. Als Performerin arbeitete sie mit und für Isabel Lewis, Nile Koetting, Nikima Jagudajev, Dora Garcia, Cally Spooner/Offshore, Debora Delmar corp. und Alicia Frankovich.
@@ -55,11 +64,28 @@
 <script>
 export default {
   name: "VideoBoxModal",
+  data: function () {
+    return {
+      videoLink: "https://player.vimeo.com/video/510192281?title=0&byline=0&portrait=0",
+      smallScreen: false
+    }
+},
   methods: {
     close() {
       this.$emit('close');
+      this.stopVideo();
     },
+    stopVideo() {
+      let player = document.getElementById('iframe-video');
+      var iframeSrc = player.src;
+      player.src = iframeSrc;
+    }
   },
+  mounted() {
+    if (screen.width < 1000) {
+      this.smallScreen = true;
+    }
+  }
 }
 </script>
 
