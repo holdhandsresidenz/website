@@ -146,6 +146,7 @@ overflow: auto;
 .modal-bio {
   flex: 1;
   display: flex;
+  overflow: auto;
   background: midnightblue;
 
 }
