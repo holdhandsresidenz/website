@@ -67,21 +67,21 @@ html, body {
 }
 
 .video1Position {
-float: right;
+  float: right;
   padding-right: 22vw;
-padding-top: 78vh;
+  padding-top: 78vh;
 }
 
 
 @media all and (max-width: 1000px) {
   .video1Position {
-    float: right;
-    padding-right: 32vw;
-    padding-top: 92%;
+    float: left;
+    padding-left: 50%;
+    padding-top: 45vh;
   }
   .opencallPosition {
     padding-top: 11vh;
-    padding-left: 25vw;
+    padding-left: 12vw;
   }
 }
 
