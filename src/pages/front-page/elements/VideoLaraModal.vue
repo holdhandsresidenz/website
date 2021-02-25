@@ -180,6 +180,7 @@ export default {
     flex: 3;
     flex-direction: column;
     height: auto;
+    overflow: auto;
   }
   .modal-container {
     position: absolute;
