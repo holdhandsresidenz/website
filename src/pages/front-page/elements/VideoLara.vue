@@ -1,7 +1,7 @@
 <template>
   <draggable-link
-      height="80"
-      width="90"
+      height="250"
+      width="250"
   >
 
 <div class="box" v-on:click="$emit('clicked', ['video1'])">

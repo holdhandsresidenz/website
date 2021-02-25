@@ -17,11 +17,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: 2px;
+  font-family: Akzi, sans-serif;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,7 +26,11 @@ export default {
   color: #2c3e50;
 
 }
-
+@font-face {
+  font-family: 'Akzi';
+  src: url("./assets/fonts/AkzidGroMed.woff") format("woff");
+  src: url("./assets/fonts/Arial-Narrow.woff") format('woff');
+}
 
 html, body {
   margin: 0;
