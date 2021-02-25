@@ -101,7 +101,7 @@ export default {
   border-radius: 22px;
 }
 .bio, .text {
-  padding: 20px;
+  padding: 10px;
   font-size: 12pt;
   color: black;
   flex: 1;
@@ -111,7 +111,10 @@ export default {
 }
 
 .bio {
-  padding-top: 17%;
+  padding-top: 40px;
+}
+.text{
+  padding-top: 15px;
 }
 
 
@@ -178,44 +181,36 @@ export default {
 @media all and (max-width: 1000px) {
   .modal-sub-container {
     display: flex;
-    flex: 3;
     flex-direction: column;
-    overflow: auto;
-    height: 100%;
+    background: rgba(0,0,0,0);
+  align-content: flex-start;
+
   }
   .modal-container {
     position: absolute;
     width: 100vw;
-
+    background: rgba(0,0,0,0);
+    border-radius: 22px ;
+    overflow: scroll;
     top: 0;
-    background: #FFFFFF;
-    box-shadow: 2px 2px 20px 1px;
-    display: flex;
-    flex-direction: row;
   }
 
   .modal-bio {
     border-top: 3px solid #00ff00;
-    display: flex;
     background: #b2b2b2;
-    height: 100%;
+    min-height: 100px;
   }
-
   .modal-text {
-    display: flex;
     background: #b2b2b2;
+    min-height: 100px;
   }
   .bio, .text {
-    padding: 20px;
+    padding: 10px;
+    padding-top: 15px;
     font-size: 12pt;
     color: black;
+    min-height: 100px;
+  }
 
-    flex: 1;
-    /* for Firefox */
-    min-height: 0;
-  }
-  .modal-video {
-    background: gray;
-  }
 }
 </style>

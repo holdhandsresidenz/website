@@ -28,16 +28,19 @@ export default {
 }
 
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
 }
 *::-webkit-scrollbar-track {
   background: #00ff00;
+
 }
 *::-webkit-scrollbar-thumb {
   background: #000;
+
 }
 *::-webkit-scrollbar-thumb:hover {
   background: #000;
+
 }
 
 @font-face {

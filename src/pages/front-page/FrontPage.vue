@@ -51,7 +51,7 @@ export default {
 <style scoped>
 html, body {
   background: #603f3f;
-  background: url("../../assets/background.jpg") no-repeat;
+  background: url("../../assets/background2.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
