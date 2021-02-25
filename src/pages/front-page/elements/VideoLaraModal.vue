@@ -180,36 +180,30 @@ export default {
 
 @media all and (max-width: 1000px) {
   .modal-sub-container {
-    display: flex;
-    flex-direction: column;
     background: rgba(0,0,0,0);
-  align-content: flex-start;
+    display: block;
+ overflow: scroll;
   }
   .modal-container {
-   
     width: 100vw;
+    height: 100vh;
     background: rgba(0,0,0,0);
     border-radius: 22px ;
-    top: 0;
     height: 100vh;
   }
 
   .modal-bio {
-
     border-top: 3px solid #00ff00;
     background: #b2b2b2;
   }
   .modal-text {
-
     background: #b2b2b2;
   }
   .bio, .text {
-
     padding: 10px;
     padding-top: 15px;
     font-size: 12pt;
     color: black;
-    min-height: 100px;
   }
 
 }
