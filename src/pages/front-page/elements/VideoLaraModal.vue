@@ -179,17 +179,21 @@ export default {
 }
 
 @media all and (max-width: 1000px) {
+  .modal-sub-container::-webkit-scrollbar {
+    width: 0px;
+  }
+
   .modal-sub-container {
     background: rgba(0,0,0,0);
     display: block;
- overflow: scroll;
+    border-radius: 0;
   }
   .modal-container {
+    top:0;
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0);
     border-radius: 22px ;
-    height: 100vh;
   }
 
   .modal-bio {
