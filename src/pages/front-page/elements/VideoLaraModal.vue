@@ -184,14 +184,25 @@ export default {
   }
   .modal-container {
     position: absolute;
-    width: 89vw;
-    height: 100vh;
+    width: 100vw;
+    height: 94vh;
     top: 0;
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
     overflow: auto;
     display: flex;
     flex-direction: row;
+  }
+
+  .modal-bio {
+    flex: 1;
+    display: flex;
+    background: midnightblue;
+  }
+  .modal-text {
+    flex: 1;
+    display: flex;
+    background: blue;
   }
 }
 </style>
