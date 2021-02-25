@@ -29,6 +29,7 @@ export default {
     switchContent: function () {
       setInterval(()=>
               this.boxContent = ((this.boxContent==="textBox") ? "pictureBox" : "textBox")
+          // Jede sekunde
       , 1000);
     }
   },
@@ -61,8 +62,6 @@ export default {
   border-radius: inherit;
   transform: skewY(12deg) rotate(-12deg);
 
-
-
   background: rgba(0,0,0,0);
   transition-duration: 0s;
   text-shadow: 0 0 3px gray;
@@ -75,7 +74,6 @@ export default {
 
   background: url("../../../assets/blob.svg") no-repeat;
   background-size: contain;
-
 
   color: rgba(0,0,0,0);
   transition-duration: 0.2s;

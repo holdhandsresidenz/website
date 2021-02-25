@@ -73,7 +73,11 @@ html, body {
 
 
 @media all and (max-width: 1000px) {
-
+  .video1Position {
+    float: right;
+    padding-right: 12vw;
+    padding-top: 10vh;
+  }
 }
 
 
