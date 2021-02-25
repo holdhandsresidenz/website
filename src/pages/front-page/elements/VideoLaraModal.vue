@@ -180,7 +180,6 @@ export default {
     flex: 3;
     flex-direction: column;
     height: auto;
-    overflow: auto;
   }
   .modal-container {
     position: absolute;
@@ -203,6 +202,16 @@ export default {
     flex: 1;
     display: flex;
     background: blue;
+  }
+  .bio, .text {
+    padding: 20px;
+    font-size: 12pt;
+    color: white;
+
+    flex: 1;
+
+    /* for Firefox */
+    min-height: 0;
   }
 }
 </style>
