@@ -60,7 +60,7 @@ export default {
   width: 100%;
   height: 100%;
   padding-left: 15%;
-  padding-top: 12%;
+  padding-top: 22%;
   border-radius: inherit;
   background: rgba(0,0,0,0);
   transition-duration: 0s;
@@ -69,8 +69,10 @@ export default {
 }
 
 .pictureBox {
+  position: absolute;
   width: 100%;
   height: 100%;
+top: 12%;
   border-radius: inherit;
   background: url("../../../assets/lara-form-web.png") no-repeat;
   background-size: contain;

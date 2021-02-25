@@ -104,13 +104,21 @@ bottom: 2%;
 
 @media all and (max-width: 1000px) {
   .video1Position {
-    float: left;
-    padding-left: 50%;
-    padding-top: 45vh;
+    position: absolute;
+    top: unset;
+    bottom: 0px;
+    right: 42px;
   }
   .opencallPosition {
-    padding-top: 11vh;
-    padding-left: 12vw;
+    position: absolute;
+    padding: 0;
+    top: 18%;
+    left: 10%;
+  }
+  .impressumPosition {
+    position: absolute;
+    bottom: 12px;
+    left: 4%;
   }
 }
 
