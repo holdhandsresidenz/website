@@ -97,12 +97,13 @@ export default {
 </script>
 
 <style scoped>
-
+* {
+  border-radius: 22px;
+}
 .bio, .text {
   padding: 20px;
   font-size: 12pt;
   color: black;
-
   flex: 1;
   overflow: auto;
   /* for Firefox */
@@ -114,14 +115,12 @@ export default {
 }
 
 
-
 .modal-container {
   position: absolute;
   width: 89vw;
   height: 89vh;
-  background: #b2b2b2;
-  box-shadow: 2px 2px 20px 1px;
-
+  background: rgba(0,0,0,0);
+  border-radius: 22px ;
   display: flex;
   flex-direction: row;
 }
@@ -139,16 +138,15 @@ export default {
   background: #b2b2b2;
   overflow: auto;
 }
-
 .modal-video {
   background: gray;
 }
-
 .modal-bio {
   flex: 1;
   display: flex;
   overflow: auto;
   background: #b2b2b2;
+
 }
 
 .modal-backdrop {
@@ -158,6 +156,7 @@ export default {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.3);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,38 +180,42 @@ export default {
     display: flex;
     flex: 3;
     flex-direction: column;
-    height: auto;
+    overflow: auto;
+    height: 100%;
   }
   .modal-container {
     position: absolute;
     width: 100vw;
-    height: 94vh;
+
     top: 0;
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
-    overflow: auto;
     display: flex;
     flex-direction: row;
   }
 
   .modal-bio {
-    flex: 1;
+    border-top: 3px solid #00ff00;
     display: flex;
-    background: midnightblue;
+    background: #b2b2b2;
+    height: 100%;
   }
+
   .modal-text {
-    flex: 1;
     display: flex;
-    background: blue;
+    background: #b2b2b2;
   }
   .bio, .text {
     padding: 20px;
     font-size: 12pt;
-    color: white;
+    color: black;
 
     flex: 1;
     /* for Firefox */
     min-height: 0;
+  }
+  .modal-video {
+    background: gray;
   }
 }
 </style>

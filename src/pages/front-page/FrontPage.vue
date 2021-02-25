@@ -59,6 +59,7 @@ html, body {
   overflow: hidden;
 }
 
+
 .opencallPosition {
   float: left;
   padding-top: 31vh;

@@ -19,13 +19,27 @@ export default {
 #app {
   font-family: Akzi, sans-serif;
   overflow: hidden;
+  line-height: 200%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   text-align: left;
   color: #2c3e50;
-
 }
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #00ff00;
+}
+*::-webkit-scrollbar-thumb {
+  background: #000;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
 @font-face {
   font-family: 'Akzi';
   src: url("./assets/fonts/AkzidGroMed.woff") format("woff");
