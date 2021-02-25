@@ -189,7 +189,7 @@ export default {
     top: 12px;
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
-
+    overflow: auto;
     display: flex;
     flex-direction: row;
   }
