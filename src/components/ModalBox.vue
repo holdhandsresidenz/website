@@ -44,13 +44,14 @@ export default {
 
 <style scoped>
 .modal-container {
-  position: absolute;
+position: fixed;
   width: 89%;
   height: 89%;
   background: #b2b2b2;
+display: flex;
   border-radius: 22px ;
-
 }
+
 
 .modal-backdrop {
   position: fixed;
@@ -90,13 +91,12 @@ z-index: 100;
     background: #00ff00;
   }
   .modal-container {
-    position: absolute;
     width: 100%;
     height: 100%;
-    background: #b2b2b2;
   }
   .modal-container::-webkit-scrollbar {
     width: 0px;
+
   }
   .btn-close {
     top: 0vh;

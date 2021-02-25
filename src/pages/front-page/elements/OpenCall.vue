@@ -43,7 +43,7 @@ a {
   }
 
   #pdf-thumb {
-    height: 150px;
+    height: 100px;
   }
 }
 </style>

@@ -13,6 +13,15 @@
      Lissy Willberg (inhaltliches Konzept, Projektleitung und Videoproduktion)<br>
 
      und gefördert durch das Kulturamt Leipzig und das Support-Büro der HGB Leipzig.
+     <br>   <br>   <br>
+     Kontakt:
+<br>
+     mail ( at ) hold-hands.net
+     <br>
+     Hold Hands Residenz   <br>
+     c/o Lissy Willberg   <br>
+     Herbartstr. 75   <br>
+     04318 Leipzig
    </div>
  </ModalBox>
 </template>
@@ -28,7 +37,15 @@ export default {
 </script>
 
 <style scoped>
+
 .impressumText {
-  padding: 50px 10px 10px 10px;
+
+  padding: 50px 10px 30px 10px;
+  overflow: auto;
+
+  border-radius: 22px;
+}
+.impressumText::-webkit-scrollbar {
+  width: 0px;
 }
 </style>

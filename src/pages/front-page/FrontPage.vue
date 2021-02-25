@@ -90,14 +90,14 @@ html, body {
 }
 
 .video1Position {
-  float: right;
-  padding-right: 22vw;
-  padding-top: 78vh;
+  position: absolute;
+  top: 12%;
+  right: 50px;
 }
 
 .impressumPosition {
 position: absolute;
-bottom: 0%;
+bottom: 2%;
   left: 4%;
 }
 
