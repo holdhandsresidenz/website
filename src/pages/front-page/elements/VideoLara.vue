@@ -53,15 +53,12 @@ export default {
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
   font-size: 12pt;
   color: #B9BABB;
-
 }
 
 .textBox {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  transform: skewY(12deg) rotate(-12deg);
-
   background: rgba(0,0,0,0);
   transition-duration: 0s;
   text-shadow: 0 0 3px gray;
@@ -71,13 +68,10 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-
-  background: url("../../../assets/blob.svg") no-repeat;
+  background: url("../../../assets/lara-form-web.png") no-repeat;
   background-size: contain;
-
   color: rgba(0,0,0,0);
   transition-duration: 0.2s;
 }
-
 
 </style>

@@ -209,7 +209,6 @@ export default {
     color: white;
 
     flex: 1;
-
     /* for Firefox */
     min-height: 0;
   }
