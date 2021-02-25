@@ -101,7 +101,7 @@ export default {
 .bio, .text {
   padding: 20px;
   font-size: 12pt;
-  color: white;
+  color: black;
 
   flex: 1;
   overflow: auto;
@@ -119,7 +119,7 @@ export default {
   position: absolute;
   width: 89vw;
   height: 89vh;
-  background: #FFFFFF;
+  background: #b2b2b2;
   box-shadow: 2px 2px 20px 1px;
 
   display: flex;
@@ -136,7 +136,7 @@ export default {
 .modal-text {
   flex: 1;
   display: flex;
-  background: blue;
+  background: #b2b2b2;
   overflow: auto;
 }
 
@@ -148,7 +148,7 @@ export default {
   flex: 1;
   display: flex;
   overflow: auto;
-  background: midnightblue;
+  background: #b2b2b2;
 }
 
 .modal-backdrop {
@@ -164,12 +164,14 @@ export default {
 }
 
 .btn-close {
+  font-family: Narr;
+  font-size: 20pt;
   cursor: pointer;
   height: 40px;
   width: 80px;
   position: absolute;
   right: 0px;
-  color: white;
+  color: #b2b2b2;
   background: blue;
   border: 0px solid #4AAE9B;
 }

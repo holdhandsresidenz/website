@@ -22,14 +22,18 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  text-align: justify;
+  text-align: left;
   color: #2c3e50;
 
 }
 @font-face {
   font-family: 'Akzi';
   src: url("./assets/fonts/AkzidGroMed.woff") format("woff");
-  src: url("./assets/fonts/Arial-Narrow.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Narr';
+  src: url("./assets/fonts/Arial-Narrow.woff") format("woff");
 }
 
 html, body {

@@ -66,9 +66,9 @@ html, body {
 }
 
 .video1Position {
-  float: right;
+float: right;
   padding-right: 22vw;
-  padding-top: 20vh;
+padding-top: 78vh;
 }
 
 

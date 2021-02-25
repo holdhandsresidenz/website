@@ -51,17 +51,20 @@ export default {
 
   word-wrap: break-word; /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  font-size: 12pt;
-  color: #B9BABB;
+  font-size: 19pt;
+
+  font-family: Narr;
+  color: #ffffff;
 }
 
 .textBox {
   width: 100%;
   height: 100%;
+  padding-left: 15%;
+  padding-top: 12%;
   border-radius: inherit;
   background: rgba(0,0,0,0);
   transition-duration: 0s;
-  text-shadow: 0 0 3px gray;
 }
 
 .pictureBox {
@@ -71,7 +74,7 @@ export default {
   background: url("../../../assets/lara-form-web.png") no-repeat;
   background-size: contain;
   color: rgba(0,0,0,0);
-  transition-duration: 0.2s;
+
 }
 
 </style>
