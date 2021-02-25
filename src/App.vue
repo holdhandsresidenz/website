@@ -22,7 +22,7 @@ export default {
   line-height: 200%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  scroll-behavior: smooth;
   text-align: left;
   color: #2c3e50;
 }
