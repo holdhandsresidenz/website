@@ -185,8 +185,8 @@ export default {
   .modal-container {
     position: absolute;
     width: 89vw;
-    height: auto;
-    top: 12px;
+    height: 100vh;
+    top: 0;
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
     overflow: auto;
