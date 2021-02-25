@@ -6,7 +6,7 @@
 
 <div class="box" v-on:click="$emit('clicked', ['video1'])">
   <div v-bind:class="boxContent" >
-    Interview <br/> Lara Dâmaso
+    INTERVIEW <br/> LARA DÂMASO
   </div>
 
 </div>
@@ -52,8 +52,8 @@ export default {
   word-wrap: break-word; /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
   font-size: 19pt;
-
-  font-family: Narr;
+  word-spacing: 0.25em;
+  font-family: Narr, sans-serif;
   color: #ffffff;
 }
 
@@ -65,6 +65,8 @@ export default {
   border-radius: inherit;
   background: rgba(0,0,0,0);
   transition-duration: 0s;
+  font-family: Narr, sans-serif;
+
 }
 
 .pictureBox {
@@ -74,7 +76,15 @@ export default {
   background: url("../../../assets/lara-form-web.png") no-repeat;
   background-size: contain;
   color: rgba(0,0,0,0);
-
+  font-family: Narr, sans-serif;
 }
 
+@media all and (max-width: 1000px) {
+  .box {
+
+    font-size: 16pt;
+
+  }
+
+}
 </style>

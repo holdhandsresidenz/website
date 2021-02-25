@@ -76,8 +76,12 @@ padding-top: 78vh;
 @media all and (max-width: 1000px) {
   .video1Position {
     float: right;
-    padding-right: 12vw;
-    padding-top: 10vh;
+    padding-right: 32vw;
+    padding-top: 92%;
+  }
+  .opencallPosition {
+    padding-top: 11vh;
+    padding-left: 25vw;
   }
 }
 
