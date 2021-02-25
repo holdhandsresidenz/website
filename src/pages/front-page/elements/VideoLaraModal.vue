@@ -20,7 +20,7 @@
               </div>
             </slot>
           </section>
-
+          <div class="greenline" v-if="smallScreen"></div>
           <section class="modal-text">
             <slot name="text">
               <div class="text">
@@ -28,7 +28,7 @@
               </div>
             </slot>
           </section>
-
+  <div class="greenline" v-if="smallScreen"></div>
           <section class="modal-bio" v-if="smallScreen">
             <slot name="bio">
               <div class="bio">
@@ -36,7 +36,6 @@
               </div>
             </slot>
           </section>
-
         </div>
 
         <section class="modal-bio" v-if="!smallScreen">
@@ -106,7 +105,6 @@ export default {
   color: black;
   flex: 1;
   overflow: auto;
-  /* for Firefox */
   min-height: 0;
 }
 
@@ -116,7 +114,6 @@ export default {
 .text{
   padding-top: 15px;
 }
-
 
 .modal-container {
   position: absolute;
@@ -149,7 +146,6 @@ export default {
   display: flex;
   overflow: auto;
   background: #b2b2b2;
-
 }
 
 .modal-backdrop {
@@ -159,14 +155,13 @@ export default {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.3);
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btn-close {
-  font-family: Narr;
+  font-family: Narr, sans-serif;
   font-size: 20pt;
   cursor: pointer;
   height: 40px;
@@ -174,15 +169,21 @@ export default {
   position: absolute;
   right: 0px;
   color: #b2b2b2;
-  background: blue;
-  border: 0px solid #4AAE9B;
+  background: #0015ff;
+  border: 0;
 }
 
 @media all and (max-width: 1000px) {
+  .greenline {
+    z-index: 5555;
+    height: 22px;
+    margin: 0  22px 0 22px;
+    border-radius: 0;
+    background: #00ff00;
+  }
   .modal-sub-container::-webkit-scrollbar {
     width: 0px;
   }
-
   .modal-sub-container {
     background: rgba(0,0,0,0);
     display: block;
@@ -197,7 +198,6 @@ export default {
   }
 
   .modal-bio {
-    border-top: 3px solid #00ff00;
     background: #b2b2b2;
   }
   .modal-text {
