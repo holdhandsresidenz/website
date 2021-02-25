@@ -8,7 +8,6 @@
   <div v-bind:class="boxContent" >
     INTERVIEW <br/> LARA DÂMASO
   </div>
-
 </div>
   </draggable-link>
 </template>
@@ -30,7 +29,7 @@ export default {
       setInterval(()=>
               this.boxContent = ((this.boxContent==="textBox") ? "pictureBox" : "textBox")
           // Jede sekunde
-      , 1000);
+      , 1500);
     }
   },
   mounted() {
@@ -54,7 +53,7 @@ export default {
   font-size: 19pt;
   word-spacing: 0.25em;
   font-family: Narr, sans-serif;
-  color: #ffffff;
+  color:#1e4650;
 }
 
 .textBox {

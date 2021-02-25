@@ -47,6 +47,7 @@ name: "DraggableLink",
 
 <style scoped>
 * {
+  cursor: pointer;
   user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;

@@ -6,16 +6,30 @@
   </div>
 
   <div class="video1Position">
-    <VideoBox @clicked="this.openModal"></VideoBox>
+    <VideoBox @clicked="this.openModalVideoLaura"></VideoBox>
   </div>
+
+  <div class="impressumPosition">
+    <Impressum @clicked="this.openModalImpressum"></Impressum>
+  </div>
+
 
   <div>
     <VideoBoxModal
-        v-show="isModalVisible"
-        @close="closeModal"
+        class="VideoLaura"
+        v-show="isModalVisibleVideoLaura"
+        @close="closeModalVideoLaura"
     ></VideoBoxModal>
   </div>
 
+  <div>
+    <ImpressumModal
+        class="impressum"
+        v-show="isModalVisibleImpressum"
+        @close="closeModalImpressum"
+    >
+    </ImpressumModal>
+  </div>
   </body>
 </template>
 
@@ -23,26 +37,36 @@
 import OpenCall from "@/pages/front-page/elements/OpenCall";
 import VideoBox from "@/pages/front-page/elements/VideoLara";
 import VideoBoxModal from "@/pages/front-page/elements/VideoLaraModal";
+import ImpressumModal from "@/pages/front-page/elements/ImpressumModal";
+import Impressum from "@/pages/front-page/elements/Impressum";
 
 export default {
   name: "FrontPage",
   components: {
+    Impressum,
     OpenCall,
     VideoBox,
-    VideoBoxModal
+    VideoBoxModal,
+    ImpressumModal
   },
   data: function () {
     return {
-      isModalVisible: false,
+      isModalVisibleVideoLaura: false,
+      isModalVisibleImpressum: false,
     }
   },
   methods: {
-    openModal() {
-      this.isModalVisible = true;
+    openModalVideoLaura() {
+      this.isModalVisibleVideoLaura = true;
     },
-    closeModal() {
-      this.isModalVisible = false;
-
+    closeModalVideoLaura() {
+      this.isModalVisibleVideoLaura = false;
+    },
+    openModalImpressum() {
+      this.isModalVisibleImpressum = true;
+    },
+    closeModalImpressum() {
+      this.isModalVisibleImpressum = false;
     }
   }
 }
@@ -59,7 +83,6 @@ html, body {
   overflow: hidden;
 }
 
-
 .opencallPosition {
   float: left;
   padding-top: 31vh;
@@ -70,6 +93,12 @@ html, body {
   float: right;
   padding-right: 22vw;
   padding-top: 78vh;
+}
+
+.impressumPosition {
+position: absolute;
+bottom: 0%;
+  left: 4%;
 }
 
 

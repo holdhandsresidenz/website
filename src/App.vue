@@ -24,8 +24,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   text-align: left;
-  color: #2c3e50;
+  color: black;
 }
+
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch
