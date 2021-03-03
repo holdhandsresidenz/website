@@ -1,7 +1,7 @@
 <template>
   <transition name="modal-fade">
-    <div class="modal-backdrop">
-      <div class="modal-container" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" id="container">
+    <div class="background">
+      <div class="container" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" id="container">
 
         <div class="modal-sub-container" v-bind:style="{ overflow: this.overflow}">
 
@@ -21,7 +21,7 @@
             </slot>
           </section>
           <div class="greenline" v-if="smallScreen"></div>
-          <section class="modal-text">
+          <section class="modal-bio">
             <slot name="text">
               <div class="text">
                {{text}}
@@ -29,7 +29,7 @@
             </slot>
           </section>
   <div class="greenline" v-if="smallScreen"></div>
-          <section class="modal-bio" v-if="smallScreen">
+          <section class="modal-introtext" v-if="smallScreen">
             <slot name="bio">
               <div class="bio">
                {{bio}}
@@ -38,7 +38,7 @@
           </section>
         </div>
 
-        <section class="modal-bio" v-if="!smallScreen">
+        <section class="modal-introtext" v-if="!smallScreen">
           <slot name="bio">
             <div class="bio">
               {{bio}}
@@ -67,7 +67,7 @@ export default {
     return {
       videoLink: "https://player.vimeo.com/video/510192281?title=0&byline=0&portrait=0",
       smallScreen: false,
-      bio: "Zur Einleitung unseres Projektes möchten wir drei Positionen vorstellen, die innerhalb des künstlerischen Feldes arbeiten, das uns interessiert. In Form von Video-Interviews, die die Künstler:innen inhaltlich selbst gestalten durften, geben sie uns einen Einblick in ihre künstlerische Praxis und Gedanken, die sie in Hinblick auf das digitale Ausstellen oder die Begehung virtueller Räume haben. Ihre Herangehensweisen und Erfahrungen in diesem Bereich fallen ganz unterschiedlich aus. Im Gespräch war Hold Hands mit den Künstler:innen Paula Abalos, Lara Dâmaso und Mickey Yang. Jede Woche werden wir auf unserer Website ein neues Interview veröffentlichen, um uns den Fragen der Residenz — zeitlich sowie inhaltlich — immer mehr zu nähern.",
+      bio: "Zur Einleitung unseres Projektes möchten wir drei Positionen vorstellen, die innerhalb des künstlerischen Feldes arbeiten, das uns interessiert. In Form von Video-Interviews, die die Künstler:innen inhaltlich selbst gestalten durften, geben sie uns einen Einblick in ihre künstlerische Praxis und Gedanken, die sie in Hinblick auf das digitale Ausstellen oder die Begehung virtueller Räume haben. Ihre Herangehensweisen und Erfahrungen in diesem Bereich fallen ganz unterschiedlich aus. Im Gespräch war Hold Hands mit den Künstler:innen Paula Ábalos, Lara Dâmaso und Mickey Yang. Jede Woche werden wir auf unserer Website ein neues Interview veröffentlichen, um uns den Fragen der Residenz — zeitlich sowie inhaltlich — immer mehr zu nähern.",
       text: "Lara Dâmaso (geb. 1996) arbeitet und lebt in Zürich. Nach einer mehrjährigen intensiven Ausbildung in Ballett und zeitgenössischem Tanz, studierte sie an der Hochschule für Grafik und Buchkunst in Leipzig im Fachbereich Medienkunst und an der Zürcher Hochschule der Künste, ZHDK, wo sie ihren Bachelor of Fine Arts erwarb. Ihre künstlerische Praxis variiert zwischen Performances, Videos, Auftritten als Performerin für verschiedene Künstler:innen und DJ-Sets. Lara’s Arbeit balanciert zwischen fokussierter Kontrolle und sinnlichem Chaos. Sie strukturiert, um zu destrukturieren und eröffnet so intime Räume, in denen ein Dialog stattfinden kann. Ihre Arbeiten wurden in verschiedenen Institutionen und Off-Spaces gezeigt, wie dem Istituto Svizzero, Centre d’Art Contemporain Genève, Kunsthalle Zürich, Cabaret Voltaire, Plymouth Rock, Kunsthalle Bern, Centre Pasqu’Art. Sie wurde für den Kiefer-Hablitzel Göhner Kunstpreis 2020 nominiert und ist nominiert für die Plattform21. Als Performerin arbeitete sie mit und für Isabel Lewis, Nile Koetting, Nikima Jagudajev, Dora Garcia, Cally Spooner/Offshore, Debora Delmar corp. und Alicia Frankovich."
     }
 },
@@ -98,6 +98,7 @@ export default {
 <style scoped>
 * {
   border-radius: 22px;
+  z-index: 44;
 }
 .bio, .text {
   padding: 10px;
@@ -115,7 +116,7 @@ export default {
   padding-top: 15px;
 }
 
-.modal-container {
+.container {
   position: absolute;
   width: 89vw;
   height: 89vh;
@@ -132,29 +133,28 @@ export default {
   height: auto;
 }
 
-.modal-text {
-  flex: 1;
-  display: flex;
+.modal-bio {
+
   background: #b2b2b2;
   overflow: auto;
 }
 .modal-video {
+  flex: 1;
   background: gray;
 }
-.modal-bio {
+.modal-introtext {
   flex: 1;
   display: flex;
-  overflow: auto;
   background: #b2b2b2;
 }
 
-.modal-backdrop {
+.background {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,7 +189,7 @@ export default {
     display: block;
     border-radius: 0;
   }
-  .modal-container {
+  .container {
     top:0;
     width: 100vw;
     height: 100vh;
@@ -197,10 +197,10 @@ export default {
     border-radius: 22px ;
   }
 
-  .modal-bio {
+  .modal-introtext {
     background: #b2b2b2;
   }
-  .modal-text {
+  .modal-bio {
     background: #b2b2b2;
   }
   .bio, .text {

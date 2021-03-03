@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <FrontPage></FrontPage>
+    <FrontPage id="front-page"></FrontPage>
   </div>
 </template>
 
@@ -16,18 +16,14 @@ export default {
 </script>
 
 <style>
+html, body {
+  margin: 0;
+}
 #app {
   font-family: Akzi, sans-serif;
-  overflow: hidden;
   line-height: 200%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
   text-align: left;
   color: black;
-}
-
-html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch
 }
@@ -37,28 +33,21 @@ html {
 }
 *::-webkit-scrollbar-track {
   background: #00ff00;
-
 }
 *::-webkit-scrollbar-thumb {
   background: #000;
-
 }
 *::-webkit-scrollbar-thumb:hover {
   background: #000;
-
 }
 
 @font-face {
   font-family: 'Akzi';
   src: url("./assets/fonts/AkzidGroMed.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Narr';
   src: url("./assets/fonts/Arial-Narrow.woff") format("woff");
 }
 
-html, body {
-  margin: 0;
-}
 </style>

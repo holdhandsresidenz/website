@@ -1,6 +1,6 @@
 <template>
   <draggable-link
-      height="250"
+      height="140"
       width="250"
   >
 
@@ -60,21 +60,19 @@ export default {
   width: 100%;
   height: 100%;
   padding-left: 15%;
-  padding-top: 22%;
+  padding-top: 18%;
   border-radius: inherit;
-  background: rgba(0,0,0,0);
   transition-duration: 0s;
   font-family: Narr, sans-serif;
 
 }
-
 .pictureBox {
   position: absolute;
   width: 100%;
   height: 100%;
-top: 12%;
+  top: 4%;
   border-radius: inherit;
-  background: url("../../../assets/lara-form-web.png") no-repeat;
+  background: url("../../../../assets/lara-form-web.png") no-repeat;
   background-size: contain;
   color: rgba(0,0,0,0);
   font-family: Narr, sans-serif;
@@ -82,10 +80,7 @@ top: 12%;
 
 @media all and (max-width: 1000px) {
   .box {
-
     font-size: 16pt;
-
   }
-
 }
 </style>

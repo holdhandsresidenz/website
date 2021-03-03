@@ -1,7 +1,6 @@
 <template>
-  <transition name="modal-fade">
-    <div class="modal-backdrop">
-      <div class="modal-container" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" id="container">
+    <div class="background">
+      <div class="container" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" id="container">
         <slot></slot>
       </div>
       <button
@@ -13,7 +12,6 @@
         Close
       </button>
     </div>
-  </transition>
 </template>
 
 <script>
@@ -43,18 +41,23 @@ export default {
 </script>
 
 <style scoped>
-.modal-container {
-position: fixed;
+* {
+  z-index: 999;
+}
+.container {
+  position: fixed;
+
   width: 89%;
   height: 89%;
-  background: #b2b2b2;
-display: flex;
+  background: rgba(62,42,51,0);
+  display: flex;
   border-radius: 22px ;
 }
 
-
-.modal-backdrop {
+.background {
   position: fixed;
+  width: 100%;
+height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -78,8 +81,7 @@ display: flex;
   position: absolute;
   top: 5.5vh;
   right: 5.5vw;
-z-index: 100;
-
+z-index: 1000;
 }
 
 @media all and (max-width: 1000px) {
@@ -90,13 +92,15 @@ z-index: 100;
     border-radius: 0;
     background: #00ff00;
   }
-  .modal-container {
+  .container {
     width: 100%;
     height: 100%;
   }
-  .modal-container::-webkit-scrollbar {
+  .container::-webkit-scrollbar {
     width: 0px;
-
+  }
+  .background {
+    background-color: black;
   }
   .btn-close {
     top: 0vh;

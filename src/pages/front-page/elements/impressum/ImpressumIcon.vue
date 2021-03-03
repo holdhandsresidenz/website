@@ -2,10 +2,9 @@
   <DraggableLink
       height="100"
       width="100"
+      id="draggable-link-impressum"
   >
-    <div class="box" v-on:click="$emit('clicked', ['impressum'])">
-      <div class="icon"></div>
-    </div>
+      <div class="icon-impressum" v-on:click="$emit('clicked', ['impressum'])"></div>
   </DraggableLink>
 </template>
 
@@ -21,13 +20,11 @@ export default {
 
 <style scoped>
 .box {
-
   height: 100%;
   width: 100%;
-
 }
-.icon{
-   background: url("../../../assets/Impressum.png") ;
+.icon-impressum{
+  background: url("../../../../assets/Impressum.png") ;
   height: 100%;
   width: 100%;
   background-size: cover;

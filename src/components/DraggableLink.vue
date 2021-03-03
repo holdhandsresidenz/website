@@ -1,20 +1,21 @@
 <template>
   <vue-draggable-resizable
+      v-bind:id="id"
       v-bind:w = "width"
       v-bind:h = "height"
       :draggable="true"
       :resizeable:="false"
+      :handles="[]"
       @dragging="onDrag"
       @dragstop="dragEnd"
   >
-
     <a
         v-bind:target="target"
         v-bind:href="link"
         v-bind:download="download"
         v-bind:class="{linkEnabled : this.notDragging, linkDisabled: !this.notDragging}"
     >
- <slot></slot>
+      <slot></slot>
     </a>
   </vue-draggable-resizable>
 </template>
@@ -25,9 +26,10 @@ name: "DraggableLink",
   props : {
   width: [String,Number],
     height: [String,Number],
-  link: String,
+   link: String,
     target: String,
-    download: String
+    download: String,
+    id: String
   },
   data: function () {
     return {
@@ -46,6 +48,7 @@ name: "DraggableLink",
 </script>
 
 <style scoped>
+
 * {
   cursor: pointer;
   user-select: none;
@@ -61,20 +64,4 @@ name: "DraggableLink",
   pointer-events: none;
 }
 
-@media all and (max-width: 1000px) {
-  * {
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-  }
-  .linkEnabled {
-    pointer-events: all;
-  }
-  .linkDisabled {
-    pointer-events: none;
-  }
-
-}
 </style>

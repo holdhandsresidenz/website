@@ -1,58 +1,83 @@
 <template>
   <body>
+  <div class="icons">
 
-  <div class="opencallPosition">
-    <OpenCall></OpenCall>
+    <div class="interview-mickey">
+      <VideoMickeyIcon @clicked="this.openModalVideoMickey"></VideoMickeyIcon>
+    </div>
+
+    <div class="interview-lara">
+      <VideoBox @clicked="this.openModalVideoLaura"></VideoBox>
+    </div>
+
+    <div class="opencall-pdf">
+      <OpenCall></OpenCall>
+    </div>
+
+    <div class="impressum">
+      <ImpressumIcon @clicked="this.openModalImpressum"></ImpressumIcon>
+    </div>
+
+
+
   </div>
 
-  <div class="video1Position">
-    <VideoBox @clicked="this.openModalVideoLaura"></VideoBox>
-  </div>
 
-  <div class="impressumPosition">
-    <Impressum @clicked="this.openModalImpressum"></Impressum>
-  </div>
-
-
-  <div>
-    <VideoBoxModal
-        class="VideoLaura"
+    <VideoBoxModalLara
+        class="VideoLauraModal"
         v-show="isModalVisibleVideoLaura"
         @close="closeModalVideoLaura"
-    ></VideoBoxModal>
-  </div>
+    ></VideoBoxModalLara>
 
-  <div>
     <ImpressumModal
-        class="impressum"
+        class="impressumModal"
         v-show="isModalVisibleImpressum"
         @close="closeModalImpressum"
     >
     </ImpressumModal>
-  </div>
+
+    <VideoMickeyModal
+        class="VideoMickeyModal"
+        v-show="isModalVisibleVideoMickey"
+        @close="closeModalVideoMickey"
+    >
+    </VideoMickeyModal>
+
   </body>
 </template>
 
 <script>
 import OpenCall from "@/pages/front-page/elements/OpenCall";
-import VideoBox from "@/pages/front-page/elements/VideoLara";
-import VideoBoxModal from "@/pages/front-page/elements/VideoLaraModal";
-import ImpressumModal from "@/pages/front-page/elements/ImpressumModal";
-import Impressum from "@/pages/front-page/elements/Impressum";
+import VideoBox from "@/pages/front-page/elements/video-lara/VideoLaraIcon";
+import VideoBoxModalLara from "@/pages/front-page/elements/video-lara/VideoLaraModal";
+import ImpressumModal from "@/pages/front-page/elements/impressum/ImpressumModal";
+import ImpressumIcon from "@/pages/front-page/elements/impressum/ImpressumIcon";
+import VideoMickeyIcon from "@/pages/front-page/elements/video-mickey/VideoMickeyIcon"
+import VideoMickeyModal from "@/pages/front-page/elements/video-mickey/VideoMickeyModal";
+
 
 export default {
   name: "FrontPage",
   components: {
-    Impressum,
+
+    ImpressumIcon,
     OpenCall,
     VideoBox,
-    VideoBoxModal,
-    ImpressumModal
+   VideoBoxModalLara,
+    ImpressumModal,
+    VideoMickeyIcon,
+    VideoMickeyModal
   },
   data: function () {
     return {
       isModalVisibleVideoLaura: false,
       isModalVisibleImpressum: false,
+      isModalVisibleVideoMickey: false
+    }
+  },
+  computed: {
+    smallScreen: function () {
+      return (window.innerWidth < 1000);
     }
   },
   methods: {
@@ -67,60 +92,125 @@ export default {
     },
     closeModalImpressum() {
       this.isModalVisibleImpressum = false;
+    },
+    openModalVideoMickey() {
+      this.isModalVisibleVideoMickey = true;
+    },
+    closeModalVideoMickey() {
+      this.isModalVisibleVideoMickey = false;
     }
   }
 }
 </script>
 
 <style scoped>
-html, body {
+html,body {
+  height: 100vh;
+  width: 100vw;
+
+}
+.icons {
+  position: relative;
+
   background: #603f3f;
   background: url("../../assets/background2.jpg") no-repeat;
   background-size: cover;
+
   height: 100vh;
   width: 100vw;
-  padding: 0;
   overflow: hidden;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-.opencallPosition {
-  float: left;
-  padding-top: 31vh;
-  padding-left: 15vw;
-}
-
-.video1Position {
+.opencall-pdf {
   position: absolute;
-  top: 12%;
-  right: 50px;
+  top:230px;
+  left: 140px;
 }
 
-.impressumPosition {
-position: absolute;
-bottom: 2%;
-  left: 4%;
+.interview-lara {
+  position: absolute;
+  top: 120px;
+  right: 107px;
 }
 
+.impressum {
+  position: absolute;
+  bottom: 20px;
+  left: 340px;
+}
+
+.interview-mickey {
+  position: absolute;
+  bottom: 40vh;
+  left: 40vw;
+}
 
 @media all and (max-width: 1000px) {
-  .video1Position {
-    position: absolute;
+  body {
+
+  }
+
+  .icons {
+    position: relative;
+
+    background: #603f3f;
+    background-image: url("../../assets/background2.jpg") ;
+    background-size: cover;
+
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .interview-lara {
+    position: unset;
     top: unset;
-    bottom: 0px;
-    right: 42px;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    align-self: center;
   }
-  .opencallPosition {
-    position: absolute;
-    padding: 0;
-    top: 18%;
-    left: 10%;
+  .opencall-pdf {
+    position: unset;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    align-self: center;
   }
-  .impressumPosition {
-    position: absolute;
-    bottom: 12px;
-    left: 4%;
+  .impressum {
+    position: unset;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    align-self: center;
+  }
+
+  .interview-mickey {
+    position: unset;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    align-self: center;
   }
 }
-
 
 </style>
