@@ -195,7 +195,7 @@ html,body {
     top: unset;
     left: unset;
     right: 6vw;
-    bottom: 2vh;
+    bottom: 7vh;
   }
 
   .interview-mickey {
@@ -203,7 +203,7 @@ html,body {
     position: absolute;
     top: 23vh;
     left: unset;
-    right: 10vw;
+    right: 0vw;
     bottom: unset;
   }
 }
