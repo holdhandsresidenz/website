@@ -14,7 +14,7 @@
         </section>
       <div class="greenline" v-if="smallScreen"></div>
         <section class="biographie">
-          {{kurzbio}}
+          kurzbio: "asdklöfjh aösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfk"
         </section>
 
     </div>
@@ -31,8 +31,8 @@ name: "VideoMickeyModal",
   },
    data: function () {
   return {
-    kurzbio: "asdklöfjh aösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfkasdklöfjh aösdkljaö afklöajsdfö asödlkfja jasdfölkj aksdjfk"
-  }
+    smallScreen: false,
+    }
    },
   methods: {
     close() {
@@ -73,7 +73,7 @@ flex: 2;
 }
   .biographie {
 flex: 1;
-    padding: 10px 0px 0px 10px;
+    padding: 10px 10px 0px 10px;
     font-size: 12pt;
     color: black;
     overflow: auto;
@@ -83,17 +83,20 @@ flex: 1;
     .greenline {
       z-index: 5555;
       height: 22px;
+      flex: 2;
       margin: 0  22px 0 22px;
       border-radius: 0;
       background: #00ff00;
     }
   .container {
     overflow: auto;
+    border-radius: 0;
+    display: block;
   }
   .video {
     flex: unset;
     width: 100%;
-    height: 100%;
+
   }
   .biographie{
     flex: unset;

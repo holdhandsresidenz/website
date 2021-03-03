@@ -173,43 +173,38 @@ html,body {
     -webkit-user-select: none;
     -ms-user-select: none;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
   }
 
   .interview-lara {
-    position: unset;
+    position: absolute;
     top: unset;
-    left: unset;
+    left: 4vw;
     right: unset;
-    bottom: unset;
-    align-self: center;
+    bottom: 18vh;
   }
   .opencall-pdf {
-    position: unset;
-    top: unset;
-    left: unset;
+    position: absolute;
+    top: 10vh;
+    left: 6vw;
     right: unset;
     bottom: unset;
-    align-self: center;
+
   }
   .impressum {
-    position: unset;
+    position: absolute;
     top: unset;
     left: unset;
-    right: unset;
-    bottom: unset;
-    align-self: center;
+    right: 6vw;
+    bottom: 2vh;
   }
 
   .interview-mickey {
-    position: unset;
-    top: unset;
+
+    position: absolute;
+    top: 23vh;
     left: unset;
-    right: unset;
+    right: 10vw;
     bottom: unset;
-    align-self: center;
   }
 }
 
