@@ -148,7 +148,7 @@ html,body {
 .interview-mickey {
   position: absolute;
   bottom: 40vh;
-  left: 40vw;
+  left: 37vw;
 }
 
 @media all and (max-width: 1000px) {
@@ -172,7 +172,6 @@ html,body {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-
   }
 
   .interview-lara {
@@ -199,9 +198,8 @@ html,body {
   }
 
   .interview-mickey {
-
     position: absolute;
-    top: 23vh;
+    top: 24vh;
     left: unset;
     right: 0vw;
     bottom: unset;
