@@ -1,12 +1,13 @@
 <template>
   <draggable-link
-      height="140"
-      width="250"
+    id="videoMickeyIcon"
   >
 
     <div class="box" v-on:click="$emit('clicked', ['video-mickey'])">
       <div v-bind:class="boxContent" >
-        INTERVIEW <br/> MICKEY YANG
+        <p>
+          INTERVIEW <br/> MICKEY YANG
+        </p>
       </div>
     </div>
   </draggable-link>
@@ -15,7 +16,7 @@
 <script>
 import DraggableLink from "@/components/DraggableLink";
 export default {
-  name: "VideoBox",
+  name: "VideoMickeyIcon",
   components: {
     DraggableLink,
   },
@@ -32,6 +33,7 @@ export default {
           , 1500);
     }
   },
+
   mounted() {
     this.switchContent();
   }
@@ -44,8 +46,6 @@ export default {
   height: 100%;
   width: 100%;
   cursor: pointer;
-  border-radius: 0.3em;
-  transition-duration: 0.2s;
   user-select: none;
 
   word-wrap: break-word; /* IE 5.5-7 */
@@ -57,20 +57,23 @@ export default {
 }
 
 .textBox {
-  width: 100%;
-  height: 100%;
-  padding-left: 15%;
-  padding-top: 18%;
+  font-size: 1.7vw;
+  line-height: 2.4vw;
+  width: 16vw;
+  height: 9vw;
+
+  padding-top: 1vw;
   border-radius: inherit;
-  background: rgba(0,0,0,0);
-  font-family: Narr, sans-serif;
 
 }
+p{
+  padding-left: 9vw;
+}
+
 .pictureBox {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 4%;
+  width: 16vw;
+  height: 9vw;
+
   border-radius: inherit;
   background: url("../../../../assets/mickey-form-web.png") no-repeat;
   background-size: contain;

@@ -21,21 +21,30 @@ html, body {
 }
 #app {
   font-family: Akzi, sans-serif;
-  line-height: 200%;
+  line-height: 2.4vw;
   text-align: left;
   color: black;
+  font-size: 1.23vw;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch
 }
 
+
+p, address{
+  transform:scaleX(0.85) translateX(-9.92vw);
+  width: 117.6%;
+}
 *::-webkit-scrollbar {
   width: 11px;
+  transform: translate(-40px);
 }
 *::-webkit-scrollbar-track {
   background: #00ff00;
+  border-radius: 2vw ;
 }
 *::-webkit-scrollbar-thumb {
   background: #000;
+  border-radius: 2vw ;
 }
 *::-webkit-scrollbar-thumb:hover {
   background: #000;

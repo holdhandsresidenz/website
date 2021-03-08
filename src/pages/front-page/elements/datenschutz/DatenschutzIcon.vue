@@ -1,15 +1,16 @@
 <template>
   <DraggableLink
-      id="draggable-link-impressum"
+      id="datenschutzIcon"
+
   >
-      <div class="icon-impressum" v-on:click="$emit('clicked', ['impressum'])"></div>
+      <div class="icon-datenschutz" v-on:click="$emit('clicked', ['datenschutz'])"></div>
   </DraggableLink>
 </template>
 
 <script>
 import DraggableLink from "@/components/DraggableLink";
 export default {
-  name: "ImpressumIcon",
+  name: "DatenschutzIcon",
   components: {
     DraggableLink
   }
@@ -18,8 +19,8 @@ export default {
 
 <style scoped>
 
-.icon-impressum{
-  background: url("../../../../assets/Impressum.png") no-repeat;
+.icon-datenschutz{
+  background: url("../../../../assets/Datenschutz.png") no-repeat;
 
   height: 7vw;
   width: 6vw;

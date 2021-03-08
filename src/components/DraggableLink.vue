@@ -1,15 +1,14 @@
 <template>
   <vue-draggable-resizable
       v-bind:id="id"
-      v-bind:w = "width"
-      v-bind:h = "height"
+
       :draggable="true"
       :resizeable:="false"
       :handles="[]"
       @dragging="onDrag"
       @dragstop="dragEnd"
   >
-    <a
+    <a  v-bind:id="linkId"
         v-bind:target="target"
         v-bind:href="link"
         v-bind:download="download"
@@ -33,7 +32,14 @@ name: "DraggableLink",
   },
   data: function () {
     return {
-      notDragging: true
+      notDragging: true,
+      cHeight: 100,
+      cWidth: 100
+    }
+  },
+  computed: {
+    linkId: function () {
+      return this.id + "-a"
     }
   },
   methods: {
@@ -42,7 +48,19 @@ name: "DraggableLink",
     },
     dragEnd: function () {
       this.notDragging = true;
-    }
+    },
+    setCWidth: function () {
+      this.cWidth =  document.getElementById(this.linkId).offsetWidth
+    },
+    setCHeight: function () {
+
+      this.cHeight =  document.getElementById(this.linkId).offsetHeight
+    },
+
+  },
+  mounted() {
+  this.setCHeight()
+    this.setCWidth()
   }
 }
 </script>
@@ -50,6 +68,7 @@ name: "DraggableLink",
 <style scoped>
 
 * {
+
   cursor: pointer;
   user-select: none;
   -moz-user-select: none;
@@ -57,6 +76,7 @@ name: "DraggableLink",
   -webkit-user-select: none;
   -o-user-select: none;
 }
+
 .linkEnabled {
   pointer-events: all;
 }

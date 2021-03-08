@@ -1,10 +1,9 @@
 <template>
   <draggable-link
+      id="opencallIcon"
       link='../assets/opencall-holdhands-de.pdf'
       target="_blank"
       download="opencall-holdhands-de.pdf"
-      width="100"
-      height="100"
   >
     <img id="pdf-thumb" src="@/assets/opencall-pdf-icon.png">
 
@@ -25,14 +24,9 @@ export default {
 </script>
 
 <style scoped>
-a {
-
-
-}
-
 
 #pdf-thumb {
-  height: 100px;
+  height: 7vw;
 }
 
 @media all and (max-width: 1000px) {
@@ -42,8 +36,5 @@ a {
     height: 50vw;
   }
 
-  #pdf-thumb {
-    height: 100px;
-  }
 }
 </style>

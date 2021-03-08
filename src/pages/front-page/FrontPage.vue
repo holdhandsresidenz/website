@@ -18,7 +18,9 @@
       <ImpressumIcon @clicked="this.openModalImpressum"></ImpressumIcon>
     </div>
 
-
+    <div class="datenschutz">
+      <DatenschutzIcon  @clicked="this.openModalDatenschutz"></DatenschutzIcon>
+    </div>
 
   </div>
 
@@ -27,6 +29,8 @@
         class="VideoLauraModal"
         v-show="isModalVisibleVideoLaura"
         @close="closeModalVideoLaura"
+        v-bind:vh="vh"
+        v-bind:vw="vw"
     ></VideoBoxModalLara>
 
     <ImpressumModal
@@ -36,10 +40,19 @@
     >
     </ImpressumModal>
 
+    <DatenschutzModal
+        class="datenschutzModal"
+        v-show="isModalVisibleDatenschutz"
+        @close="closeModalDatenschutz"
+    >
+    </DatenschutzModal>
+
     <VideoMickeyModal
         class="VideoMickeyModal"
         v-show="isModalVisibleVideoMickey"
         @close="closeModalVideoMickey"
+        v-bind:vh="vh"
+        v-bind:vw="vw"
     >
     </VideoMickeyModal>
 
@@ -54,11 +67,15 @@ import ImpressumModal from "@/pages/front-page/elements/impressum/ImpressumModal
 import ImpressumIcon from "@/pages/front-page/elements/impressum/ImpressumIcon";
 import VideoMickeyIcon from "@/pages/front-page/elements/video-mickey/VideoMickeyIcon"
 import VideoMickeyModal from "@/pages/front-page/elements/video-mickey/VideoMickeyModal";
+import DatenschutzModal from "@/pages/front-page/elements/datenschutz/DatenschutzModal";
+import DatenschutzIcon from "@/pages/front-page/elements/datenschutz/DatenschutzIcon";
 
 
 export default {
   name: "FrontPage",
   components: {
+    DatenschutzIcon,
+    DatenschutzModal,
 
     ImpressumIcon,
     OpenCall,
@@ -72,12 +89,10 @@ export default {
     return {
       isModalVisibleVideoLaura: false,
       isModalVisibleImpressum: false,
-      isModalVisibleVideoMickey: false
-    }
-  },
-  computed: {
-    smallScreen: function () {
-      return (window.innerWidth < 1000);
+      isModalVisibleVideoMickey: false,
+      isModalVisibleDatenschutz: false,
+      vw: 1920,
+      vh: 1080
     }
   },
   methods: {
@@ -98,8 +113,27 @@ export default {
     },
     closeModalVideoMickey() {
       this.isModalVisibleVideoMickey = false;
+    },
+    openModalDatenschutz() {
+      this.isModalVisibleDatenschutz = true;
+    },
+    closeModalDatenschutz() {
+      this.isModalVisibleDatenschutz = false;
+    },
+    updateSize() {
+      console.log("updateds")
+      this.vh = window.innerHeight
+      this.vw = window.innerWidth
     }
+  },
+  created() {
+    this.updateSize()
+    window.addEventListener('resize', this.updateSize)
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.updateSize)
   }
+
 }
 </script>
 
@@ -113,7 +147,7 @@ html,body {
   position: relative;
 
   background: #603f3f;
-  background: url("../../assets/background2.jpg") no-repeat;
+  background: url("../../assets/background.jpg") no-repeat;
   background-size: cover;
 
   height: 100vh;
@@ -151,6 +185,12 @@ html,body {
   left: 37vw;
 }
 
+.datenschutz{
+  position: absolute;
+  bottom: 40vh;
+  right: 17vw;
+}
+
 @media all and (max-width: 1000px) {
   body {
 
@@ -160,7 +200,7 @@ html,body {
     position: relative;
 
     background: #603f3f;
-    background-image: url("../../assets/background2.jpg") ;
+    background-image: url("../../assets/background.jpg") ;
     background-size: cover;
 
     height: 100vh;

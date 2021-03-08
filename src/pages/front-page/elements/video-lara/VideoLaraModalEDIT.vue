@@ -1,6 +1,6 @@
 <template>
   <transition name="modal-fade">
-
+    <div class="background">
       <div class="container" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" id="container">
 
         <div class="modal-sub-container" v-bind:style="{ overflow: this.overflow}">
@@ -12,7 +12,7 @@
                   position:relative;">
                 <iframe
                     id="iframe-video"
-                    src="https://www.youtube.com/embed/lYUhY50DeR4"
+                    src="https://www.youtube.com/embed/hcq1uCh3VTg"
                     style="position:absolute;top:0;left:0;width:100%;height:100%;"
                     frameborder="0"
                     allow="autoplay; fullscreen;"
@@ -56,7 +56,7 @@
         </button>
 
       </div>
-
+    </div>
   </transition>
 </template>
 
@@ -118,10 +118,6 @@ export default {
 
 .container {
   position: absolute;
-  top: 4vw;
-  bottom: 5vw;
-  left: 5vw;
-  right: 5vw;
   width: 89vw;
   height: 89vh;
   background: rgba(0,0,0,0);
