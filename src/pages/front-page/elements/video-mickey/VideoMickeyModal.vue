@@ -1,16 +1,16 @@
 <template>
   <ModalBox @close=close
-            left="25"
-            right="25"
-            top="4"
-            bottom="5"
-            borderRadius="1.4"
+            v-bind:left="vh < 1000 ? '0' : '25'"
+            v-bind:right="vh < 1000 ? '0' : '25'"
+            v-bind:top="vh < 1000 ? '0' : '4'"
+            v-bind:bottom="vh < 1000 ? '0' : '5'"
+            v-bind:border-radius="vh < 1000 ? '5' : '1.4'"
   >
 
 
   <iframe
       id="iframe-video-mickey"
-  v-bind:style="{height: this.videoHeight+'px', width: this.videoWidth + 'px'}"
+  v-bind:style="{height: this.videoHeight+'px', width: this.videoWidth }"
       v-bind:height="(videoHeight + 'px')"
       v-bind:width="videoWidth+'px'"
   frameborder="0"
@@ -64,18 +64,24 @@ export default {
       var iframeSrc = player.src;
       player.src = iframeSrc;
     },
-
-
   },
   computed: {
     videoWidth: function () {
-      return this.vw * (0.5)
+      if (this.vw > 1000) {
+        return this.vw * (0.5)
+      } else {
+        return this.vw
+      }
     },
     videoHeight: function () {
       return this.videoWidth * 0.5625
     },
     bioHeight: function () {
-      return (this.vh * 0.9) - this.videoHeight
+      if (this.vw > 1000) {
+        return ((this.vh * 0.9) - this.videoHeight) + 'px'
+      }else {
+        return (100 + '%')
+      }
     },
     smallScreen: function () {
       return (this.vw < 1000)
@@ -86,9 +92,7 @@ export default {
 </script>
 
 <style scoped>
-* {
-  border-radius: 2vw;
-}
+
 
 #iframe-video-mickey {
 background: rgba(52,35,48,0);
@@ -96,6 +100,7 @@ background: rgba(52,35,48,0);
   margin: 0;
   display: block;
   padding: 0;
+  border-radius: 2vw;
 }
 
 .biographie {
@@ -119,6 +124,25 @@ background: rgba(52,35,48,0);
     margin: 0 22px 0 22px;
     border-radius: 0;
     background: #00ff00;
+  }
+  .biographie {
+
+    overflow: scroll;
+    height: 100%;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 5vw;
+
+  }
+
+  #iframe-video-mickey {
+    background: rgba(52,35,48,0);
+    border: 0;
+    margin: 0;
+    display: block;
+    padding: 0;
+    border-radius: 5vw;
   }
 
 }

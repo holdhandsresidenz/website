@@ -35,6 +35,9 @@ export default {
     width: 100vw;
     height: 50vw;
   }
+  #pdf-thumb {
+    height: 100px;
+  }
 
 }
 </style>

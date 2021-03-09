@@ -1,10 +1,10 @@
 <template>
   <ModalBox @close="$emit('close')"
-            left="5"
-            right="5"
-            top="4"
-            bottom="5"
-            borderRadius="1.4"
+            v-bind:left="vh < 1000 ? '0' : '5'"
+            v-bind:right="vh < 1000 ? '0' : '5'"
+            v-bind:top="vh < 1000 ? '0' : '4'"
+            v-bind:bottom="vh < 1000 ? '0' : '5'"
+            v-bind:border-radius="vh < 1000 ? '3' : '1.4'"
   >
     <section class="datenschutzText">
 
@@ -172,6 +172,10 @@
 import ModalBox from "@/components/ModalBox";
 export default {
   name: "DatenschutzModal",
+  props: {
+    vh: Number,
+    vw: Number,
+  },
   components: {
     ModalBox
   }
@@ -185,6 +189,16 @@ export default {
   height: 100%;
   overflow: auto;
   background: #b2b2b2;
+}
+@media all and (max-width: 1000px) {
+
+  .datenschutzText {
+    padding: 0vw 0vw 2vw 2vw;
+  }
+  p{
+    width: 110%;
+  }
+
 }
 
 </style>

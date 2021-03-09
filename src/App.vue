@@ -58,5 +58,14 @@ p, address{
   font-family: 'Narr';
   src: url("./assets/fonts/Arial-Narrow.woff") format("woff");
 }
-
+@media all and (max-width: 1000px) {
+  #app{
+    line-height: 200%;
+    font-size: 13pt;
+  }
+  *::-webkit-scrollbar {
+    width: 0px;
+    transform: translate(-40px);
+  }
+  }
 </style>

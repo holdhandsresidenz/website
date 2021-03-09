@@ -27,7 +27,7 @@
 
     <VideoBoxModalLara
         class="VideoLauraModal"
-        v-show="isModalVisibleVideoLaura"
+        v-if="isModalVisibleVideoLaura"
         @close="closeModalVideoLaura"
         v-bind:vh="vh"
         v-bind:vw="vw"
@@ -35,21 +35,25 @@
 
     <ImpressumModal
         class="impressumModal"
-        v-show="isModalVisibleImpressum"
+        v-if="isModalVisibleImpressum"
         @close="closeModalImpressum"
+        v-bind:vh="vh"
+        v-bind:vw="vw"
     >
     </ImpressumModal>
 
     <DatenschutzModal
         class="datenschutzModal"
-        v-show="isModalVisibleDatenschutz"
+        v-if="isModalVisibleDatenschutz"
         @close="closeModalDatenschutz"
+        v-bind:vh="vh"
+        v-bind:vw="vw"
     >
     </DatenschutzModal>
 
     <VideoMickeyModal
         class="VideoMickeyModal"
-        v-show="isModalVisibleVideoMickey"
+        v-if="isModalVisibleVideoMickey"
         @close="closeModalVideoMickey"
         v-bind:vh="vh"
         v-bind:vw="vw"
@@ -219,7 +223,7 @@ html,body {
     top: unset;
     left: 4vw;
     right: unset;
-    bottom: 18vh;
+    bottom: 5vh;
   }
   .opencall-pdf {
     position: absolute;
@@ -234,7 +238,13 @@ html,body {
     top: unset;
     left: unset;
     right: 6vw;
-    bottom: 7vh;
+    bottom: 0vh;
+  }
+
+  .datenschutz{
+    position: absolute;
+    bottom: 40vh;
+    left: 17vw;
   }
 
   .interview-mickey {

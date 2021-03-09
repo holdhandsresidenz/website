@@ -50,8 +50,6 @@ export default {
 
   word-wrap: break-word; /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  font-size: 19pt;
-  word-spacing: 0.25em;
   font-family: Narr, sans-serif;
   color:#1e4650;
 }
@@ -82,9 +80,17 @@ p{
 }
 
 @media all and (max-width: 1000px) {
-  .box {
+  .textBox {
+    width: 150px;
+    height: 150px;
     font-size: 16pt;
+    line-height: 150%;
   }
+  .pictureBox {
+    width: 200px;
+    height: 200px;
+  }
+
 }
 </style>
 

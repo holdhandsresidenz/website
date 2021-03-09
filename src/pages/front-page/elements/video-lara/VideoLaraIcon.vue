@@ -69,7 +69,6 @@ p{
   padding-left: 9vw;
 }
 .pictureBox {
-
   width: 16vw;
   height: 9vw;
 
@@ -80,8 +79,16 @@ p{
 }
 
 @media all and (max-width: 1000px) {
-  .box {
+  .textBox {
+
+    width: 150px;
+    height: 150px;
     font-size: 16pt;
+    line-height: 150%;
+  }
+  .pictureBox {
+    width: 200px;
+    height: 200px;
   }
 }
 </style>

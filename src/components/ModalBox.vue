@@ -62,10 +62,8 @@ export default {
 
 .container {
   position: absolute;
-
   border-radius: 1.4vw;
-overflow: hidden;
-
+  overflow: hidden;
 }
 
 .btn-close {
@@ -75,7 +73,6 @@ overflow: hidden;
   font-size: 1.8vw;
   cursor: pointer;
   height: 2.8vw;
-
   width: 5.5vw;
 
   color: #b2b2b2;
@@ -87,6 +84,21 @@ overflow: hidden;
 }
 
 @media all and (max-width: 1000px) {
+  .btn-close {
+    position: absolute;
+    right: 0;
+    font-family: Narr, sans-serif;
+    font-size: 18pt;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
 
+    color: #b2b2b2;
+    background: #0015ff;
+    border: 0;
+    border-radius: 22px;
+
+    z-index: 1000;
+  }
 }
 </style>

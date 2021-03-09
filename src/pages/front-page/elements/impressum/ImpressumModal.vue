@@ -1,10 +1,10 @@
 <template>
  <ModalBox @close="$emit('close')"
- left="5"
-           right="5"
-           top="4"
-           bottom="5"
-           borderRadius="1.4"
+           v-bind:left="vh < 1000 ? '0' : '5'"
+           v-bind:right="vh < 1000 ? '0' : '5'"
+           v-bind:top="vh < 1000 ? '0' : '4'"
+           v-bind:bottom="vh < 1000 ? '0' : '5'"
+           v-bind:border-radius="vh < 1000 ? '3' : '1.4'"
  >
 
      <div class="impressumText">
@@ -51,7 +51,11 @@ export default {
   name: "ImpressumModal",
   components: {
     ModalBox
-  }
+  },
+  props: {
+    vh: String,
+    vw: String,
+  },
 }
 </script>
 
@@ -65,6 +69,13 @@ export default {
 padding-left: 2vw;
   background: #b2b2b2;
 }
+@media all and (max-width: 1000px) {
 
+  .impressumText {
+    padding: 4vw 2vw 2vw 2vw;
+  }
+
+
+}
 
 </style>
